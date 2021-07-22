@@ -4,10 +4,11 @@
 // components
 import Button from './components/Button';
 import StateComponent from './components/StateComponent';
-import ConditionalRendering from './components/ConditionalRendering'
+import ConditionalRendering from './components/ConditionalRendering';
 
 // sample app
-import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent'
+import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
+import GuestComponent from './sampleApp/GuestComponent/GuestComponent';
 
 function App() {
   // const abc = event.target.value;
@@ -59,6 +60,8 @@ function App() {
       <h2>Sample App</h2>
       <h5>ComposeComponent</h5>
       <ComposeComponent />
+      <h5>GuestGreeting</h5>
+      <GuestComponent />
     </div>
   );
 }
