@@ -1,11 +1,11 @@
 import React from 'react';
 import AvatarComponent from './AvatarComponent';
 
-function UserInfoComponent(props) {
+function UserInfoComponent({ author }) {
   return ( 
     <div>
-        <AvatarComponent image={props.author.avatar}/>
-        {props.author.name}
+        <AvatarComponent image={author.avatar}/>
+        {author.name}
     </div>
   )
 }

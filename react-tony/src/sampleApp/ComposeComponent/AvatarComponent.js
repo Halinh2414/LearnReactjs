@@ -2,9 +2,10 @@ import React from 'react';
 
 function AvatarComponent(props) {
   return ( 
-    <div>
-        <img src={props.image} />
-    </div>
+    <>
+      <img src={props.image} title="Avatar" alt="Avatar" />
+      <br/>
+    </>
   )
 }
 

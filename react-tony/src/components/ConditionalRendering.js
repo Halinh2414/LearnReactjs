@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styles from './condtion.module.css';
 
 function LoginComponent() {
   return (
@@ -28,7 +29,7 @@ function ConditionalRendering() {
   
   return (
     <div>
-      <h3>Inline && operators </h3>
+      <h3 className={styles.title}>Inline && operators </h3>
       {isAuth && <div>logined</div>}
 
       <h3>inline if else</h3>
