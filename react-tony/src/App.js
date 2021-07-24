@@ -12,6 +12,7 @@ import Forms from './components/Forms';
 // sample app
 import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
 import GuestComponent from './sampleApp/GuestComponent/GuestComponent';
+import GenerateBoxsComponent from './sampleApp/GenerateBoxsComponent/GenerateBoxsComponent';
 
 function App() {
   // const abc = event.target.value;
@@ -79,6 +80,11 @@ function App() {
       -------------------------
       <h2>Forms</h2>
       <Forms />
+
+
+      --------------------------
+      <h2>GenerateBoxs</h2>
+      <GenerateBoxsComponent />
     </div>
   );
 }

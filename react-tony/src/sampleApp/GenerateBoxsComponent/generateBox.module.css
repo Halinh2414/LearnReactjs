@@ -1,0 +1,10 @@
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: lightgray;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px;
+    border-radius: 10px;
+}
