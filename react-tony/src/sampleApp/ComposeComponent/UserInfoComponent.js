@@ -5,7 +5,7 @@ function UserInfoComponent({ author }) {
   return ( 
     <div>
         <AvatarComponent image={author.avatar}/>
-        {author.name}
+        {author.name}1
     </div>
   )
 }
