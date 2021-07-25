@@ -10,6 +10,8 @@ import StylingCss from './components/StylingCss';
 import Forms from './components/Forms';
 import UseEffectHook from './components/UseEffectHook';
 
+import Books from './components/Books/Books';
+
 // sample app
 import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
 import GuestComponent from './sampleApp/GuestComponent/GuestComponent';
@@ -97,6 +99,11 @@ function App() {
       {isUseEffect && <UseEffectHook />}
       
       <button type="button" onClick={() => setIsUseEffect(prevState => !prevState)}>test clean up</button>
+
+
+      ------------------------
+      <h2>useContext</h2>
+      <Books />
     </div>
   );
 }
