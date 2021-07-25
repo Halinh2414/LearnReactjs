@@ -10,3 +10,4 @@ function AvatarComponent(props) {
 }
 
 export default AvatarComponent;
+
