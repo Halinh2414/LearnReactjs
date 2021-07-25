@@ -1,25 +1,37 @@
 import React, { useState } from 'react';
 import styles from './BoxesColor.module.css'
 
-function BoxesColorComponent(props) {
-    const color = ['red', 'yellow', 'aqua', 'purple'];
+const color = ['red', 'yellow', 'aqua', 'purple'];
+
+function BoxesColorComponent() {
+    // States
     const [colorBoxes, setColorBoxes] = useState(color);
     const [isActive, setIsActive] = useState(true);
-    function handleChangeColorBox(colors,) {
-        setIsActive(!isActive);
-        if (isActive === true) {
-            const newColors = [colors, colors, colors, colors];
-            setColorBoxes(newColors);
-        } else {
+
+    function handleChangeColorBox(colors) {
+        setIsActive(prevState => !prevState);
+
+        if(!isActive) {
             const newColors = color;
             setColorBoxes(newColors);
+            return;
         }
+        const newColors = [colors, colors, colors, colors];
+        setColorBoxes(newColors);
+
+        // if (isActive) {
+        //     const newColors = [colors, colors, colors, colors];
+        //     setColorBoxes(newColors);
+        // } else {
+        //     const newColors = color;
+        //     setColorBoxes(newColors);
+        // }
     }
     return (
         <div>
             <ul className={styles.wrapperBox}>
-            {colorBoxes.map((e, idx) => (
-                <li className={styles.box} key={`item`+idx} style={{backgroundColor: e}} onClick={() => {handleChangeColorBox(e)}}>
+            {colorBoxes.length > 0 && colorBoxes.map((boxItem, idx) => (
+                <li className={styles.box} key={`item`+idx} style={{backgroundColor: boxItem}} onClick={() => handleChangeColorBox(boxItem)}>
                     {color[idx]}
                 </li>
             ))}

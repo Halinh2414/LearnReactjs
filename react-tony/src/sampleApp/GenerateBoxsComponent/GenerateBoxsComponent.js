@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import styles from './generateBox.module.css';
 
-function GenerateBoxsComponent(props) {
-    const [number, setNumber] = useState('');
-    const [listBox, setListBox] = useState('');
+function GenerateBoxsComponent() {
+    const [number, setNumber] = useState(0);
+    const [listBox, setListBox] = useState([]);
+
     function onChangeInput(event) {
         const {value} = event.target;
         const regex = /^[0-9\b]+$/;
@@ -13,15 +14,12 @@ function GenerateBoxsComponent(props) {
     }
     function handleClick() {
         if  (number > 0 && number < 129) {
-            var listBox1 = Array.from({ length: number }, (_, i) => i+1);
-            var listBox = listBox1.length > 0 && listBox1.map((e, idx) => (
-                <li className={styles.box} key={`item`+idx} >
-                    Box #{idx + 1}
-                </li>
-            ));
-            setListBox(listBox); 
+            const newBoxs = [];
+            for(let i = 0; i < number; i++) {
+                newBoxs.push(i);
+            }
+            setListBox(newBoxs); 
         }
-        return listBox;
     } 
     return (
         <div>
@@ -30,7 +28,9 @@ function GenerateBoxsComponent(props) {
             <input type="text" name="numberBox" value={number} onChange={onChangeInput} />
             <button type="button" onClick={handleClick}>Generate</button>
             <ul>
-                {listBox}
+                {listBox.length > 0 ? listBox.map(box => (
+                    <li className={styles.box} key={box}>Box #{box}</li>
+                )) : <div>no data</div>}
             </ul>
         </div>
     );
