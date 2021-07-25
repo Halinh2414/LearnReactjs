@@ -13,6 +13,7 @@ import Forms from './components/Forms';
 import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
 import GuestComponent from './sampleApp/GuestComponent/GuestComponent';
 import GenerateBoxsComponent from './sampleApp/GenerateBoxsComponent/GenerateBoxsComponent';
+import BoxesColorComponent from './sampleApp/BoxesColorComponent/BoxesColorComponent';
 
 function App() {
   // const abc = event.target.value;
@@ -85,6 +86,9 @@ function App() {
       --------------------------
       <h2>GenerateBoxs</h2>
       <GenerateBoxsComponent />
+      --------------------------
+      <h2>Boxes Color</h2>
+      <BoxesColorComponent />
     </div>
   );
 }

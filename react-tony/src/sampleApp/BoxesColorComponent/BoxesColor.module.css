@@ -1,0 +1,16 @@
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: lightgray;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}
+
+.wrapperBox {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
