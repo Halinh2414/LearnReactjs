@@ -17,6 +17,8 @@ import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
 import GuestComponent from './sampleApp/GuestComponent/GuestComponent';
 import GenerateBoxsComponent from './sampleApp/GenerateBoxsComponent/GenerateBoxsComponent';
 import BoxesColorComponent from './sampleApp/BoxesColorComponent/BoxesColorComponent';
+import FromRegisterComponent from './sampleApp/FormRegisterComponent/FromRegisterComponent';
+import TodoComponent from './sampleApp/TodoComponent/TodoComponent';
 
 function App() {
   // const abc = event.target.value;
@@ -71,6 +73,10 @@ function App() {
       <ComposeComponent />
       <h5>GuestGreeting</h5>
       <GuestComponent />
+      <h5>From Register</h5>
+      <FromRegisterComponent />
+      <h5>TodoComponent</h5>
+      <TodoComponent />
 
 
 

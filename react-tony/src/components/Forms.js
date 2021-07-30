@@ -53,7 +53,6 @@ function Forms() {
   
   return (
     <div>
-      {forms.lastName} {forms.firstName}
       <br />
       FirstName: <input type="text" name="firstName" value={forms.firstName} onChange={onChangeForms} />
       LastName: <input type="text" name="lastName" value={forms.lastName} onChange={onChangeForms} />

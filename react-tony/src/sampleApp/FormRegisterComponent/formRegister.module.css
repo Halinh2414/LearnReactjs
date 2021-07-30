@@ -1,0 +1,50 @@
+.container {
+    border-radius: 5px;
+    border: 1px solid #c1c1c1;
+}
+p label{
+    width: 135px;
+    text-align: right;
+}
+
+p input {
+    width: 300px;
+    height: 40px;
+    margin-left: 15px;
+    padding: 5px 10px;
+}
+.header {
+    color: white;
+    padding: 15px 20px;
+    background: #424242;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.header h6 {
+    margin-bottom: 0;
+}
+
+.container form {
+    padding: 20px;
+    text-align: center;
+}
+
+.container form button {
+    color: white;
+    background: #3838fb;
+    border-radius: 5px;
+    border: none;
+    padding: 7px 20px;
+}
+.error {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 20px;
+    margin: 20px auto;
+}
+.error li {
+    list-style-type: none;
+    color: red;
+}
