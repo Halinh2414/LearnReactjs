@@ -65,14 +65,14 @@ function FromRegisterComponent() {
     if (!isConfirmPass) {
       errors.push("Confirm password must be same as password, please try again.");
     }
+
     if (errors.length > 0) {
       setShowErrors(true);
       setErrorMessages(errors);
+      return
     } 
-    else {
-      setShowErrors(false);
-      alert("register succesful")
-    }
+    setShowErrors(false);
+    alert("register succesful")
   };
 
   return(

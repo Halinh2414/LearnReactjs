@@ -4,8 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// context
+import { AppProvider } from 'context/AppContext';
+
 ReactDOM.render(
-  <App />,
+  <AppProvider>
+    <App />
+  </AppProvider>,
   document.getElementById('root')
 );
 

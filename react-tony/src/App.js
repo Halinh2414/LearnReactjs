@@ -11,6 +11,8 @@ import Forms from './components/Forms';
 import UseEffectHook from './components/UseEffectHook';
 
 import Books from './components/Books/Books';
+import UseReducerCounter from 'components/UseReducerCounter';
+import UseRef from 'components/UseRef'
 
 // sample app
 import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
@@ -106,10 +108,19 @@ function App() {
       
       <button type="button" onClick={() => setIsUseEffect(prevState => !prevState)}>test clean up</button>
 
-
       ------------------------
       <h2>useContext</h2>
       <Books />
+
+      ------------------------
+      <h2>useReducer</h2>
+      <UseReducerCounter />
+
+      ------------------------
+      <h2>useRef</h2>
+      <UseRef />
+
+      
     </div>
   );
 }
