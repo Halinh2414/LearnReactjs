@@ -21,6 +21,7 @@ import GenerateBoxsComponent from './sampleApp/GenerateBoxsComponent/GenerateBox
 import BoxesColorComponent from './sampleApp/BoxesColorComponent/BoxesColorComponent';
 import FromRegisterComponent from './sampleApp/FormRegisterComponent/FromRegisterComponent';
 import TodoComponent from './sampleApp/TodoComponent/TodoComponent';
+import MovieComponent from 'sampleApp/MovieFilmComponent/MovieComponent';
 
 function App() {
   // const abc = event.target.value;
@@ -79,6 +80,8 @@ function App() {
       <FromRegisterComponent />
       <h5>TodoComponent</h5>
       <TodoComponent />
+      <h5>Movie Film</h5>
+      <MovieComponent />
 
 
 
