@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 // import isOdd from 'is-odd'
 
 // components
@@ -12,7 +12,10 @@ import UseEffectHook from './components/UseEffectHook';
 
 import Books from './components/Books/Books';
 import UseReducerCounter from 'components/UseReducerCounter';
-import UseRef from 'components/UseRef'
+import UseRef from 'components/UseRef';
+import MemoHook from 'components/MemoHook'
+import CustomHooks from 'components/CustomHooks';
+import CustomHooksB from 'components/CustomHooksB';
 
 // sample app
 import ComposeComponent from './sampleApp/ComposeComponent/ComposeComponent';
@@ -40,6 +43,10 @@ function App() {
       <h3>render a function</h3>
     )
   }
+
+  const handleTitle = useCallback(() => {
+    console.log('handleTitle')
+  }, [])
 
   return (
     <div>
@@ -110,7 +117,7 @@ function App() {
       {isUseEffect && <UseEffectHook />}
       
       <button type="button" onClick={() => setIsUseEffect(prevState => !prevState)}>test clean up</button>
-
+      <br />
       ------------------------
       <h2>useContext</h2>
       <Books />
@@ -123,6 +130,15 @@ function App() {
       <h2>useRef</h2>
       <UseRef />
 
+      ------------------------
+      <h2>memo hooks</h2>
+      <MemoHook title="truong" handleTitle={handleTitle} />
+
+      ------------------------
+      <h2>Custom Hooks</h2>
+      <CustomHooks />
+      <br />
+      <CustomHooksB />
       
     </div>
   );
