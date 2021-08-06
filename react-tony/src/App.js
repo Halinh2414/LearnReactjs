@@ -9,6 +9,7 @@ import ListKey from './components/ListKey';
 import StylingCss from './components/StylingCss';
 import Forms from './components/Forms';
 import UseEffectHook from './components/UseEffectHook';
+import BiglistsComponent from 'sampleApp/BigList/BiglistsComponent';
 
 import Books from './components/Books/Books';
 import UseReducerCounter from 'components/UseReducerCounter';
@@ -31,11 +32,17 @@ function App() {
   // const { value } = event.target;
   // const { target: { value } } = event.target;
   const [isUseEffect, setIsUseEffect] = useState(true)
+  const [numberList, setNumberList] = useState([1])
   const renderElement_1 = <h3>Express JS: {5 + 5}</h3>
   const users = {
     firstName: 'truong',
     lastName: 'tony'
   }
+  const handleClick = useCallback((item) => {
+    console.log(item);
+    setNumberList(item);
+  }, []
+  )
 
   // render a function out side UI
   function renderElement2() {
@@ -89,8 +96,8 @@ function App() {
       <TodoComponent />
       <h5>Movie Film</h5>
       <MovieComponent />
-
-
+      <h5>Big lists</h5>
+      <BiglistsComponent  handleClick={handleClick}/>
 
       ---------------------------
       <h2>List & Keys</h2>
